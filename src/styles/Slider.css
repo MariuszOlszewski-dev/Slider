@@ -1,0 +1,235 @@
+.slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  height: calc(100% - 105px);
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity ease-in-out .5s;
+  transition: opacity ease-in-out .5s;
+  overflow: hidden;
+}
+
+.activeSlide {
+  opacity: 1;
+}
+
+.activeContent {
+  -webkit-animation: fronte 0.7s linear forwards;
+          animation: fronte 0.7s linear forwards;
+}
+
+@-webkit-keyframes fronte {
+  from {
+    z-index: 2;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    z-index: 2;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fronte {
+  from {
+    z-index: 2;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    z-index: 2;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide img {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  max-width: 2560px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.opacityLayout {
+  position: absolute;
+  top: 105px;
+  left: 0;
+  width: 100%;
+  max-width: 2560px;
+  height: calc(100% - 105px);
+  -o-object-fit: cover;
+     object-fit: cover;
+  background: #000000 0% 0% no-repeat padding-box;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.slideHeading {
+  margin: 10% 5% 0 0;
+  z-index: 2;
+  padding-left: 13.3%;
+}
+
+.slideHeading .rectangle {
+  width: 450px;
+  height: 2px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+
+.slideHeading .rectangle div {
+  width: 45px;
+  height: 2px;
+  background: #2ECC71 0% 0% no-repeat padding-box;
+}
+
+.slideHeading h1 {
+  margin-bottom: 0;
+  text-align: left;
+  font: normal normal bold 60px/71px Work Sans;
+  letter-spacing: 2.64px;
+  color: #FFFFFF;
+}
+
+.slideHeading h3 {
+  max-width: 1000px;
+  margin: 0 40px 22px 40px;
+  text-align: left;
+  font: normal normal 300 44px/52px Work Sans;
+  letter-spacing: 1.94px;
+  color: #FFFFFF;
+}
+
+.content {
+  padding-left: 13.3%;
+  margin-right: 5%;
+  max-width: 930px;
+  text-align: left;
+  font: normal normal normal 18px/30px Barlow;
+  letter-spacing: 0.72px;
+  color: #FFFFFF;
+  z-index: 2;
+}
+
+.btnContainer {
+  z-index: 2;
+  padding-left: 13.3%;
+}
+
+.btnContainer .btn1 {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  width: 244px;
+  height: 59px;
+  margin-right: 30px;
+  background: #2ECC71 0% 0% no-repeat padding-box;
+  border-radius: 7px;
+  z-index: 4;
+  text-align: center;
+  font: normal normal 500 16px/19px Barlow;
+  letter-spacing: 0.66px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.btnContainer .btn1:hover {
+  background: radial-gradient(circle, #3f5efb 0%, #2ecc71 100%);
+  text-decoration: underline;
+}
+
+.btnContainer .btn2 {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  width: 267px;
+  height: 59px;
+  border: 2px solid #2ECC71;
+  border-radius: 7px;
+  z-index: 4;
+  text-align: center;
+  font: normal normal 500 16px/19px Barlow;
+  letter-spacing: 0.66px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.btnContainer .btn2:hover {
+  background: rgba(46, 204, 113, 0.5);
+  text-decoration: underline;
+}
+
+.vericalElem {
+  position: absolute;
+  bottom: 0px;
+  width: 232px;
+  height: 49px;
+  margin-left: 13.3%;
+  border-left: 1px solid #FFFFFF;
+  opacity: 1;
+  z-index: 2;
+  color: #FFFFFF;
+  text-align: right;
+  font: normal normal normal 16px/28px Barlow;
+  letter-spacing: 0.64px;
+}
+
+.dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  position: absolute;
+  top: 14vw;
+  margin-left: 13.3%;
+  z-index: 2;
+}
+
+.dots .dot {
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  opacity: 0.15;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.dots .activeDot {
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  opacity: 1;
+  z-index: 2;
+  cursor: pointer;
+}
+/*# sourceMappingURL=Slider.css.map */
