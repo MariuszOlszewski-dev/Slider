@@ -1,281 +1,293 @@
 $desktopHeight: calc(100% - 105px);
-$mobileHeight: calc(100% - 63px);;
+$mobileHeight: calc(100% - 63px);
 $maxWidth: 2560px;
 $color-black: #000;
 $color-white: #fff;
-$color-lightGreen: #2ECC71;
+$color-lightGreen: #2ecc71;
 $btn-border-radius: 7px;
 $content-padding-left: 13.3%;
 
-
 .slide {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    width: 100%;
-    height: $desktopHeight;
-    position: absolute;
-    opacity: 0;
-    transition: opacity ease-in-out .5s;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  height: $desktopHeight;
+  position: absolute;
+  opacity: 0;
+  transition: opacity ease-in-out 0.5s;
+  overflow: hidden;
 }
 
 .activeSlide {
-    opacity: 1;
+  opacity: 1;
 }
 
 .activeContent {
-    animation: fronte 0.7s linear forwards; 
+  animation: fronte 0.7s linear forwards;
 }
 
 @keyframes fronte {
-    from { z-index: 2; transform: translateX(-50%); opacity: 0; }
-    to { z-index: 2; transform: translateX(0); opacity: 1; }
+  from {
+    z-index: 2;
+    transform: translateX(-50%);
+    opacity: 0;
   }
+  to {
+    z-index: 2;
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
 .slide img {
-    position: absolute;
-    z-index: 0;
-    width: 100%;
-    max-width: $maxWidth;
-    height: 100%;
-    object-fit: cover;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  max-width: $maxWidth;
+  height: 100%;
+  object-fit: cover;
 }
 
 .opacityLayout {
-    position: absolute;
-    width: 100%;
-    max-width: $maxWidth;
-    height: $desktopHeight;
-    object-fit: cover;
-    background: $color-black 0% 0% no-repeat padding-box;
-    z-index: 1;
-    opacity: 0.5;
+  position: absolute;
+  width: 100%;
+  max-width: $maxWidth;
+  height: $desktopHeight;
+  object-fit: cover;
+  background: $color-black 0% 0% no-repeat padding-box;
+  z-index: 1;
+  opacity: 0.5;
 }
 
 .slideHeading {
-    margin: 10% 5% 0 0;
-    z-index: 2;
-    padding-left: $content-padding-left;
-    .rectangle{
-        width: 450px;
-        height: 2px;
-        background: $color-white 0% 0% no-repeat padding-box;
-        div {
-            width: 45px;
-            height: 2px;
-            background: $color-lightGreen 0% 0% no-repeat padding-box;
-        }
+  margin: 10% 5% 0 0;
+  z-index: 2;
+  padding-left: $content-padding-left;
+  .rectangle {
+    width: 450px;
+    height: 2px;
+    background: $color-white 0% 0% no-repeat padding-box;
+    div {
+      width: 45px;
+      height: 2px;
+      background: $color-lightGreen 0% 0% no-repeat padding-box;
     }
-    h1 {
-        margin-bottom: 0;
-        text-align: left;
-        font: normal normal bold 60px/71px Work Sans;
-        letter-spacing: 2.64px;
-        color: $color-white;
-        -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-        hyphens: auto;
-    }
-    h3 {
-        max-width: 1000px;
-        margin: 0 10px 22px 40px;
-        text-align: left;
-        font: normal normal 300 44px/52px Work Sans;
-        letter-spacing: 1.94px;
-        color: $color-white;
-    }
+  }
+  h1 {
+    margin-bottom: 0;
+    text-align: left;
+    font: normal normal bold 60px/71px Work Sans;
+    letter-spacing: 2.64px;
+    color: $color-white;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+  }
+  h3 {
+    max-width: 1000px;
+    margin: 0 10px 22px 40px;
+    text-align: left;
+    font: normal normal 300 44px/52px Work Sans;
+    letter-spacing: 1.94px;
+    color: $color-white;
+  }
 }
 
 .content {
-    padding-left: $content-padding-left;
-    margin-right: 5%;
-    max-width: 930px;
-    text-align: left;
-    font: normal normal normal 18px/30px Barlow;
-    letter-spacing: 0.72px;
-    color: $color-white;
-    z-index: 2;
+  padding-left: $content-padding-left;
+  margin-right: 5%;
+  max-width: 930px;
+  text-align: left;
+  font: normal normal normal 18px/30px Barlow;
+  letter-spacing: 0.72px;
+  color: $color-white;
+  z-index: 2;
 }
 
 .btnContainer {
-    z-index: 2;
-    padding-left: $content-padding-left;
-    & .btn1 {
-        cursor: pointer;
-        outline: none;
-        border: none;
-        width: 244px;
-        height: 59px;
-        margin-right: 30px;
-        background: $color-lightGreen 0% 0% no-repeat padding-box;
-        border-radius: $btn-border-radius;
-        z-index:4;
-        // text properties
-        text-align: center;
-        font: normal normal 500 16px/19px Barlow;
-        letter-spacing: 0.66px;
-        color: $color-white;
-        text-transform: uppercase;
-        opacity: 1;
-        &:hover {
-            background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(46,204,113,1) 100%);
-            text-decoration: underline;
-        }
+  z-index: 2;
+  padding-left: $content-padding-left;
+  & .btn1 {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    width: 244px;
+    height: 59px;
+    margin-right: 30px;
+    background: $color-lightGreen 0% 0% no-repeat padding-box;
+    border-radius: $btn-border-radius;
+    z-index: 4;
+    // text properties
+    text-align: center;
+    font: normal normal 500 16px/19px Barlow;
+    letter-spacing: 0.66px;
+    color: $color-white;
+    text-transform: uppercase;
+    opacity: 1;
+    &:hover {
+      background: radial-gradient(
+        circle,
+        rgba(63, 94, 251, 1) 0%,
+        rgba(46, 204, 113, 1) 100%
+      );
+      text-decoration: underline;
     }
-    
-    & .btn2 {
-        background-color: transparent;
-        background-repeat: no-repeat;
-        cursor: pointer;
-        overflow: hidden;
-        outline: none;
-        width: 267px;
-        height: 59px;
-        border: 2px solid $color-lightGreen;
-        border-radius: $btn-border-radius;
-        z-index:4;
-        // text properties
-        text-align: center;
-        font: normal normal 500 16px/19px Barlow;
-        letter-spacing: 0.66px;
-        color: $color-white;
-        text-transform: uppercase;
-        opacity: 1;
-        &:hover {
-            background: rgba(46,204,113,0.5);
-            text-decoration: underline;
-        }
+  }
+
+  & .btn2 {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    width: 267px;
+    height: 59px;
+    border: 2px solid $color-lightGreen;
+    border-radius: $btn-border-radius;
+    z-index: 4;
+    // text properties
+    text-align: center;
+    font: normal normal 500 16px/19px Barlow;
+    letter-spacing: 0.66px;
+    color: $color-white;
+    text-transform: uppercase;
+    opacity: 1;
+    &:hover {
+      background: rgba(46, 204, 113, 0.5);
+      text-decoration: underline;
     }
+  }
 }
 
 .vericalElem {
-    position: absolute;
-    bottom: 0px;
-    width: 232px;
-    height: 49px;
-    margin-left: $content-padding-left;
-    border-left: 1px solid $color-white;
-    opacity: 1;
-    z-index: 2;
-    color: $color-white;
-    text-align: right;
-    font: normal normal normal 16px/28px Barlow;
-    letter-spacing: 0.64px;
+  position: absolute;
+  bottom: 0px;
+  width: 232px;
+  height: 49px;
+  margin-left: $content-padding-left;
+  border-left: 1px solid $color-white;
+  opacity: 1;
+  z-index: 2;
+  color: $color-white;
+  text-align: right;
+  font: normal normal normal 16px/28px Barlow;
+  letter-spacing: 0.64px;
 }
 
 .dots {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    position: absolute;
-    top: 14vw;
-    margin-left: $content-padding-left;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  top: 14vw;
+  margin-left: $content-padding-left;
+  z-index: 2;
+  & .dot {
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    background: $color-white 0% 0% no-repeat padding-box;
+    opacity: 0.15;
     z-index: 2;
-    & .dot {
-        border-radius: 50%;
-        width: 12px;
-        height: 12px;
-        background: $color-white 0% 0% no-repeat padding-box;
-        opacity: 0.15;
-        z-index: 2;
-        cursor: pointer;
-    }
+    cursor: pointer;
+  }
 
-    & .activeDot {
-        border-radius: 50%;
-        width: 16px;
-        height: 16px;
-        background: $color-white 0% 0% no-repeat padding-box;
-        opacity: 1;
-        z-index: 2;
-        cursor: pointer;
-    }
+  & .activeDot {
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    background: $color-white 0% 0% no-repeat padding-box;
+    opacity: 1;
+    z-index: 2;
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 1150px) {
-    .dots  {
-        top: 17vw;
-    }
+  .dots {
+    top: 17vw;
+  }
 }
 
 @media (max-width: 800px), (max-height: 830px) {
-    .slide, .opacityLayout  {
-        height: $mobileHeight;
-    }
-    .dots  {
-        top: 14vw;
-    }
-    .vericalElem {
-        display: none;
-    }
-    .content {
-        display: -webkit-box;
-        max-width: 500px;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+  .slide,
+  .opacityLayout {
+    height: $mobileHeight;
+  }
+  .dots {
+    top: 14vw;
+  }
+  .vericalElem {
+    display: none;
+  }
+  .content {
+    display: -webkit-box;
+    max-width: 500px;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
-@media (max-width: 600px){
-    .dots {
-        top: 36vw;
-        margin-left: 5%;
-        & .dot {
-            width: 9px;
-            height: 9px;
-        }
-        & .activeDot {
-            width: 12px;
-            height: 12px;
-        }
+@media (max-width: 600px) {
+  .dots {
+    top: 36vw;
+    margin-left: 5%;
+    & .dot {
+      width: 9px;
+      height: 9px;
     }
-    .slideHeading{
-        padding-left: 5.5%;
-        margin: 28% 5% 0 0;
-        .rectangle{
-            width: 58%;
-            height: 2px;
-            background: $color-white 0% 0% no-repeat padding-box;
-        }
-        h1 {
-            font: normal normal bold 30px/30px Work Sans;
-            letter-spacing: 1.32px;
-        }
-        h3 {
-            font: normal normal 300 18px/21px Work Sans;
-            letter-spacing: 0.79px;
-            margin-left:20px;
-        }
+    & .activeDot {
+      width: 12px;
+      height: 12px;
     }
-    .content {
-        padding-left: 5.5%;
-        font: normal normal normal 16px/25px Barlow;
-        letter-spacing: 0.64px;
+  }
+  .slideHeading {
+    padding-left: 5.5%;
+    margin: 28% 5% 0 0;
+    .rectangle {
+      width: 58%;
+      height: 2px;
+      background: $color-white 0% 0% no-repeat padding-box;
     }
-    .btnContainer {
-        display: flex;
-        flex-direction: column-reverse;
-        flex-wrap: wrap;
-        gap: 20px;
-        padding-left: 5.5%;
-        & .btn1 {
-            width: 204px;
-            flex-shrink: 0;
-        }
-        & .btn2 {
-            width: 227px;
-            flex-shrink: 0;
-        }
+    h1 {
+      font: normal normal bold 30px/30px Work Sans;
+      letter-spacing: 1.32px;
     }
+    h3 {
+      font: normal normal 300 18px/21px Work Sans;
+      letter-spacing: 0.79px;
+      margin-left: 20px;
+    }
+  }
+  .content {
+    padding-left: 5.5%;
+    font: normal normal normal 16px/25px Barlow;
+    letter-spacing: 0.64px;
+  }
+  .btnContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 5.5%;
+    & .btn1 {
+      width: 204px;
+      flex-shrink: 0;
+    }
+    & .btn2 {
+      width: 227px;
+      flex-shrink: 0;
+    }
+  }
 }
 
 @media (min-width: 2100px) {
-    .dots {
-        top: 13vw;
-    }
+  .dots {
+    top: 13vw;
+  }
 }

@@ -11,8 +11,8 @@
   height: calc(100% - 105px);
   position: absolute;
   opacity: 0;
-  -webkit-transition: opacity ease-in-out .5s;
-  transition: opacity ease-in-out .5s;
+  -webkit-transition: opacity ease-in-out 0.5s;
+  transition: opacity ease-in-out 0.5s;
   overflow: hidden;
 }
 
@@ -92,7 +92,7 @@
 .slideHeading .rectangle div {
   width: 45px;
   height: 2px;
-  background: #2ECC71 0% 0% no-repeat padding-box;
+  background: #2ecc71 0% 0% no-repeat padding-box;
 }
 
 .slideHeading h1 {
@@ -138,7 +138,7 @@
   width: 244px;
   height: 59px;
   margin-right: 30px;
-  background: #2ECC71 0% 0% no-repeat padding-box;
+  background: #2ecc71 0% 0% no-repeat padding-box;
   border-radius: 7px;
   z-index: 4;
   text-align: center;
@@ -162,7 +162,7 @@
   outline: none;
   width: 267px;
   height: 59px;
-  border: 2px solid #2ECC71;
+  border: 2px solid #2ecc71;
   border-radius: 7px;
   z-index: 4;
   text-align: center;
@@ -241,7 +241,8 @@
 }
 
 @media (max-width: 800px), (max-height: 830px) {
-  .slide, .opacityLayout {
+  .slide,
+  .opacityLayout {
     height: calc(100% - 63px);
   }
   .dots {
