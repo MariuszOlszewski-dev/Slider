@@ -67,14 +67,12 @@
 
 .opacityLayout {
   position: absolute;
-  top: 105px;
-  left: 0;
   width: 100%;
   max-width: 2560px;
   height: calc(100% - 105px);
   -o-object-fit: cover;
      object-fit: cover;
-  background: #000000 0% 0% no-repeat padding-box;
+  background: #000 0% 0% no-repeat padding-box;
   z-index: 1;
   opacity: 0.5;
 }
@@ -88,7 +86,7 @@
 .slideHeading .rectangle {
   width: 450px;
   height: 2px;
-  background: #FFFFFF 0% 0% no-repeat padding-box;
+  background: #fff 0% 0% no-repeat padding-box;
 }
 
 .slideHeading .rectangle div {
@@ -102,16 +100,19 @@
   text-align: left;
   font: normal normal bold 60px/71px Work Sans;
   letter-spacing: 2.64px;
-  color: #FFFFFF;
+  color: #fff;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 .slideHeading h3 {
   max-width: 1000px;
-  margin: 0 40px 22px 40px;
+  margin: 0 10px 22px 40px;
   text-align: left;
   font: normal normal 300 44px/52px Work Sans;
   letter-spacing: 1.94px;
-  color: #FFFFFF;
+  color: #fff;
 }
 
 .content {
@@ -121,7 +122,7 @@
   text-align: left;
   font: normal normal normal 18px/30px Barlow;
   letter-spacing: 0.72px;
-  color: #FFFFFF;
+  color: #fff;
   z-index: 2;
 }
 
@@ -143,7 +144,7 @@
   text-align: center;
   font: normal normal 500 16px/19px Barlow;
   letter-spacing: 0.66px;
-  color: #FFFFFF;
+  color: #fff;
   text-transform: uppercase;
   opacity: 1;
 }
@@ -167,7 +168,7 @@
   text-align: center;
   font: normal normal 500 16px/19px Barlow;
   letter-spacing: 0.66px;
-  color: #FFFFFF;
+  color: #fff;
   text-transform: uppercase;
   opacity: 1;
 }
@@ -183,10 +184,10 @@
   width: 232px;
   height: 49px;
   margin-left: 13.3%;
-  border-left: 1px solid #FFFFFF;
+  border-left: 1px solid #fff;
   opacity: 1;
   z-index: 2;
-  color: #FFFFFF;
+  color: #fff;
   text-align: right;
   font: normal normal normal 16px/28px Barlow;
   letter-spacing: 0.64px;
@@ -217,7 +218,7 @@
   border-radius: 50%;
   width: 12px;
   height: 12px;
-  background: #FFFFFF 0% 0% no-repeat padding-box;
+  background: #fff 0% 0% no-repeat padding-box;
   opacity: 0.15;
   z-index: 2;
   cursor: pointer;
@@ -227,9 +228,102 @@
   border-radius: 50%;
   width: 16px;
   height: 16px;
-  background: #FFFFFF 0% 0% no-repeat padding-box;
+  background: #fff 0% 0% no-repeat padding-box;
   opacity: 1;
   z-index: 2;
   cursor: pointer;
+}
+
+@media (max-width: 1150px) {
+  .dots {
+    top: 17vw;
+  }
+}
+
+@media (max-width: 800px), (max-height: 830px) {
+  .slide, .opacityLayout {
+    height: calc(100% - 63px);
+  }
+  .dots {
+    top: 14vw;
+  }
+  .vericalElem {
+    display: none;
+  }
+  .content {
+    display: -webkit-box;
+    max-width: 500px;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (max-width: 600px) {
+  .dots {
+    top: 36vw;
+    margin-left: 5%;
+  }
+  .dots .dot {
+    width: 9px;
+    height: 9px;
+  }
+  .dots .activeDot {
+    width: 12px;
+    height: 12px;
+  }
+  .slideHeading {
+    padding-left: 5.5%;
+    margin: 28% 5% 0 0;
+  }
+  .slideHeading .rectangle {
+    width: 58%;
+    height: 2px;
+    background: #fff 0% 0% no-repeat padding-box;
+  }
+  .slideHeading h1 {
+    font: normal normal bold 30px/30px Work Sans;
+    letter-spacing: 1.32px;
+  }
+  .slideHeading h3 {
+    font: normal normal 300 18px/21px Work Sans;
+    letter-spacing: 0.79px;
+    margin-left: 20px;
+  }
+  .content {
+    padding-left: 5.5%;
+    font: normal normal normal 16px/25px Barlow;
+    letter-spacing: 0.64px;
+  }
+  .btnContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 5.5%;
+  }
+  .btnContainer .btn1 {
+    width: 204px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .btnContainer .btn2 {
+    width: 227px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+}
+
+@media (min-width: 2100px) {
+  .dots {
+    top: 13vw;
+  }
 }
 /*# sourceMappingURL=Slider.css.map */

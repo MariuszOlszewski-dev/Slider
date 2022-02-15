@@ -9,11 +9,21 @@ header {
 }
 
 nav {
-    width: 1412px;
-    height: 32px;
+    cursor: pointer;
     text-align: center;
     letter-spacing: 1.19px;
     font: normal normal bold 27px/32px Work Sans;
     color: #DADADA;
     opacity: 1;
+}
+
+@media (max-width: 800px), (max-height: 720px) {
+    header{
+        height: 63px;
+    }
+    nav {
+        font: normal normal bold 18px/21px Work Sans;
+        letter-spacing: 0.79px;
+    }
+
 }
